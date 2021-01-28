@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Test NMarket</title>
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;display=swap&amp;subset=cyrillic" rel="stylesheet">
+  <link rel="stylesheet" href="./css/styles.min.css">
+  <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+  <section class="flats">
+    <div class="container">
+      <div class="flats__item flat">
+        <div class="flat__b-main">
+          <div class="flat__b-image">
+            <img src="./img/flat_2r.svg" alt="План 2-к квартиры" title="2-к квартира">
+          </div>
+          <div class="flat__b-desc">
+            <h2 class="flat__title">2-к квартира</h2>
+            <div class="flat__desc-inner">
+              <div class="flat__row flat__row--floor">
+                <span class="flat__type">Этаж</span>
+                <span class="flat__data">3 из 19</span>
+              </div>
+              <div class="flat__row flat__row--height">
+                <span class="flat__type">Высота потолков</span>
+                <span class="flat__data">3,2 м</span>
+              </div>
+              <div class="flat__row flat__row--finishing">
+                <span class="flat__type">Отделка</span>
+                <span class="flat__data">Предчистовая</span>
+              </div>
+              <div class="flat__row flat__row--area-total">
+                <span class="flat__type">Общая площадь</span>
+                <span class="flat__data">32,24 м²</span>
+              </div>
+              <div class="flat__row flat__row--area-living">
+                <span class="flat__type">Жилая площадь</span>
+                <span class="flat__data">22,24 м²</span>
+              </div>
+              <div class="flat__row flat__row--area-kitchen">
+                <span class="flat__type">Площадь кухни</span>
+                <span class="flat__data">14,24 м²</span>
+              </div>
+            </div>
+            <div class="flat__options">
+              <div class="flat__option flat__option--preview">
+                <span>
+                  <svg>
+                    <use xlink:href="./img/sprite.svg#check"></use>
+                  </svg>
+                </span>Вы были на просмотре
+              </div>
+              <div class="flat__option flat__option--accredited">
+                <span>
+                  <svg>
+                    <use xlink:href="./img/sprite.svg#stop"></use>
+                  </svg>
+                </span>Дом аккредитован другим банком
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flat__b-sale">
+          <div class="flat__booking">Ваша цена по брони до <span class="flat__booking-date">19 сентября</span>
+          </div>
+          <div class="flat__price">3 312 666 Р</div>
+          <div class="flat__dev-price">Текущая цена у застройщика
+            <br> дороже на <span class="flat__dev-price-current">324 825 Р</span>
+          </div>
+          <button class="btn flat__btn flat__btn--price">
+            <svg>
+              <use xlink:href="./img/sprite.svg#key"></use>
+            </svg>Выбрать для покупки
+          </button>
+        </div>
+        <btn class="flat__btn-close">
+          <svg>
+            <use xlink:href="./img/sprite.svg#close"></use>
+          </svg>
+        </btn>
+      </div>
+    </div>
+  </section>
+  <script src="./js/scripts.min.js"></script>
+  <script src="./js/main.js"></script>
+</body>
+
+</html>

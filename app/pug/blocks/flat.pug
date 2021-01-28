@@ -1,0 +1,47 @@
+section.flats
+  .container
+    .flats__item.flat
+      .flat__b-main
+        .flat__b-image
+          img(src="./img/flat_2r.svg" alt="План 2-к квартиры" title="2-к квартира")
+        .flat__b-desc
+          h2.flat__title 2-к квартира
+          .flat__desc-inner
+            .flat__row.flat__row--floor
+              span.flat__type Этаж
+              span.flat__data 3 из 19
+            .flat__row.flat__row--height
+              span.flat__type Высота потолков
+              span.flat__data 3,2 м
+            .flat__row.flat__row--finishing
+              span.flat__type Отделка
+              span.flat__data Предчистовая
+            .flat__row.flat__row--area-total
+              span.flat__type Общая площадь
+              span.flat__data 32,24 м²
+            .flat__row.flat__row--area-living
+              span.flat__type Жилая площадь
+              span.flat__data 22,24 м²
+            .flat__row.flat__row--area-kitchen
+              span.flat__type Площадь кухни
+              span.flat__data 14,24 м²
+          .flat__options
+            .flat__option.flat__option--preview
+              span
+                +svg('check')
+              | Вы были на просмотре
+            .flat__option.flat__option--accredited
+              span
+                +svg('stop')
+              | Дом аккредитован другим банком
+      .flat__b-sale
+        .flat__booking Ваша цена по брони до 
+          span.flat__booking-date 19 сентября
+        .flat__price 3 312 666 Р
+        .flat__dev-price Текущая цена у застройщика<br> дороже на 
+          span.flat__dev-price-current 324 825 Р
+        button.btn.flat__btn.flat__btn--price
+          +svg('key')
+          | Выбрать для покупки 
+      btn.flat__btn-close
+        +svg('close')

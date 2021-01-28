@@ -1,0 +1,414 @@
+@import 'vars';
+@import 'mixins';
+
+
+::placeholder {
+  color: #666;
+}
+  
+::selection {
+  background-color: $accent;
+  color: #fff;
+}
+  
+html {
+  overflow-x: hidden;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*, ::before, ::after {
+  box-sizing: inherit;
+}
+  
+body{
+  position: relative;
+  min-width: 320px;
+  overflow: hidden;
+  font-weight: 400;
+  font-size: 16px;
+  font-family: $font-default;
+  line-height: 1.4;
+  color: $text;
+  background-color: #E5E5E5;
+  
+  input, textarea {
+    border: #666 1px solid;
+    outline: none;
+  }
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
+   
+h1, h2, h3, h4 {
+  margin-top: 0;
+  font-weight: 700;
+}
+
+p {
+  margin-top: 0;
+}
+  
+.container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  @include desktop {
+    max-width: 880px;
+    padding: 0 8px;
+  }
+
+  @include laptop {
+    max-width: 720px;
+  }
+
+  @include tablets {
+    max-width: 540px;
+  }
+
+  @include phones {
+    max-width: 320px;
+  }
+}
+
+
+.flats {
+  min-height: 100vh;
+  padding: 40px 0;
+
+  &__item {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  @include laptop {
+    &__item {
+      flex-wrap: wrap;
+    }
+  }
+}
+
+.flat {
+  padding: 24px;
+  background-color: #ffffff;
+  border-radius: 8px;
+
+  &__b-main {
+    display: flex;
+  }
+
+  &__b-image {
+    flex: 1 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 178px;
+    height: 178px;
+  }
+
+  &__b-desc {
+    margin-left: 32px;
+  }
+
+  &__title {
+    margin-bottom: 8px;
+    font-weight: 700;
+    font-size: 24px;
+  }
+
+  &__desc-inner {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    width: 432px;
+    line-height: 1.5;
+  }
+
+  &__row {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 12px;
+  }
+
+  &__type {
+    font-weight: 400;
+    font-size: 12px;
+    color: $grey;
+  }
+
+  &__data {
+    font-weight: 500;
+    font-size: 14px;
+    color: $text;
+  }
+
+  &__options {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin-top: 6px;
+    margin-left: -16px;
+  }
+
+  &__option {
+    position: relative;
+    min-height: 32px;
+    margin-left: 16px;
+    padding: 8px 16px;
+    padding-left: 36px;
+    font-weight: 500;
+    font-size: 12px;
+    border-radius: 22px;
+    
+    span {
+      position: absolute;
+      top: 50%;
+      left: 15px;
+      width: 12px;
+      height: 12px;
+      transform: translateY(-50%);
+
+      svg {
+        width: 12px;
+        height: 12px;
+      }
+    }
+
+    &--preview {
+      color: #64B851;
+      background-color: #F2FAF0;
+      
+      svg {
+        fill: #64B851;
+      }
+    }
+    &--accredited {
+      color: #EB4B51;
+      background-color: #FAF0F0;
+      
+      svg {
+        fill: #EB4B51;
+      }
+    }
+  }
+
+  &__b-sale {
+    display: flex;
+    flex-direction: column;
+    width: 308px;
+    margin-left: auto;
+    padding-left: 30px;
+    padding-right: 6px;
+    border-left: 1px solid #F0EEEB;
+  }
+
+  &__booking {
+    margin-bottom: 2px;
+    font-size: 14px;
+    color: $grey;
+  }
+
+  &__booking-date {
+    font-weight: 500;
+    color: #2794DB;
+  }
+
+  &__price {
+    margin-bottom: 16px;
+    font-weight: 700;
+    font-size: 24px;
+  }
+  &__dev-price {
+    margin-bottom: 22px;
+    font-size: 14px;
+    line-height: 1.45;
+    color: $grey;
+  }
+  &__dev-price-current {
+    font-weight: 500;
+    font-size: 14px;
+    color: #EB4B51;
+  }
+
+  &__btn {
+    position: relative;
+    display: block;
+    border: none;
+    border-radius: 6px;
+
+    &--price {
+      min-height: 44px;
+      margin-top: auto;
+      padding: 15px 50px;
+      font-weight: 500;
+      font-size: 14px;
+      background-color: #FAC62D;
+      transition: $slowdown;
+
+      &:hover {
+        background-color: #F0B505;
+      }
+
+      &:active {
+        background-color: #E1AB08;
+      }
+    }
+
+    svg {
+      width: 13px;
+      height: 13px;
+      margin-right: 8px;
+    }
+
+  }
+
+  &__btn-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    border: none;
+    background-color: none;
+    width: 28px;
+    height: 28px;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+
+    svg {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 16px;
+      height: 16px;
+      fill: #B2B0AB;
+      transform: translate(-50%, -50%);
+      transition: all 0.2s ease;
+    }
+
+    &:hover {
+      background-color: #F5F4F2;
+
+      svg {
+        fill: #383736;
+      }
+    }
+
+    &:active {
+      background-color: #E7E4DE;
+    }
+  }
+
+  @include desktop {
+
+    &__desc-inner {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      width: 290px;
+      line-height: 1.45;
+    }
+
+    &__row {
+      &:nth-child(3) {
+        grid-column: 2;
+        grid-row: 2;
+      }
+      &:nth-child(4) {
+        grid-column: 1;
+        grid-row: 2;
+      }
+    }
+
+    &__b-sale {
+      flex: 1 0 auto;
+    }
+  
+    &__options {
+      margin-bottom: -8px;
+      margin-right: -8px;
+    }
+
+    &__option {
+      margin-bottom: 8px;
+    }
+
+  }
+
+  @include laptop {
+    padding: 24px;
+    &__b-desc {
+      flex-grow: 1;
+    }
+
+    &__b-sale {
+      width: 100%;
+      margin-top: 24px;
+      padding: 0 8px;
+      padding-top: 24px;
+      border-left: none;
+      border-top: 1px solid #F0EEEB;
+    }
+  }
+
+  @include tablets {
+    width: 304px;
+    margin: 0 auto;
+    padding: 20px;
+
+    &__b-main {
+      width: 100%;
+      flex-direction: column;
+    }
+
+    &__b-image {
+      width: 100%;
+    }
+
+    &__b-desc {
+      margin-left: 0;
+      margin-top: 16px;
+    }
+
+    &__title {
+      font-size: 20px;
+    }
+
+    &__b-sale {
+      margin-top: 20px;
+      padding: 0;
+      padding-top: 20px;
+    }
+
+    &__price {
+      margin-bottom: 10px;
+      font-size: 20px;
+    }
+
+    &__dev-price {
+      margin-bottom: 18px;
+    }
+
+    &__btn {
+      &--price {
+        padding: 14px 40px;
+      }
+    }
+  }
+}
+
+
