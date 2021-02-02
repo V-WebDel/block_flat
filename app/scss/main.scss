@@ -70,21 +70,9 @@ p {
   padding: 0 20px;
 
   @include desktop {
-    max-width: 880px;
     padding: 0 8px;
   }
 
-  @include laptop {
-    max-width: 720px;
-  }
-
-  @include tablets {
-    max-width: 540px;
-  }
-
-  @include phones {
-    max-width: 320px;
-  }
 }
 
 
@@ -124,7 +112,7 @@ p {
   }
 
   &__b-desc {
-    margin-left: 32px;
+    margin: 0 32px;
   }
 
   &__title {
@@ -228,6 +216,7 @@ p {
   &__booking-date {
     font-weight: 500;
     color: #2794DB;
+    white-space: nowrap;
   }
 
   &__price {
@@ -256,7 +245,7 @@ p {
     &--price {
       min-height: 44px;
       margin-top: auto;
-      padding: 15px 50px;
+      padding: 15px 20px;
       font-weight: 500;
       font-size: 14px;
       background-color: #FAC62D;
@@ -333,14 +322,9 @@ p {
         grid-row: 2;
       }
     }
-
-    &__b-sale {
-      flex: 1 0 auto;
-    }
   
     &__options {
       margin-bottom: -8px;
-      margin-right: -8px;
     }
 
     &__option {
@@ -351,8 +335,10 @@ p {
 
   @include laptop {
     padding: 24px;
+
     &__b-desc {
       flex-grow: 1;
+      margin: 0;
     }
 
     &__b-sale {
@@ -366,7 +352,6 @@ p {
   }
 
   @include tablets {
-    width: 304px;
     margin: 0 auto;
     padding: 20px;
 

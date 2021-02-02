@@ -81,23 +81,7 @@ p {
 }
 @media screen and (max-width:1200px) {
   .container {
-    max-width: 880px;
     padding: 0 8px
-  }
-}
-@media screen and (max-width:920px) {
-  .container {
-    max-width: 720px
-  }
-}
-@media screen and (max-width:768px) {
-  .container {
-    max-width: 540px
-  }
-}
-@media screen and (max-width:576px) {
-  .container {
-    max-width: 320px
   }
 }
 .flats {
@@ -146,7 +130,7 @@ p {
   height: 178px
 }
 .flat__b-desc {
-  margin-left: 32px
+  margin: 0 32px
 }
 .flat__title {
   margin-bottom: 8px;
@@ -254,7 +238,8 @@ p {
 }
 .flat__booking-date {
   font-weight: 500;
-  color: #2794db
+  color: #2794db;
+  white-space: nowrap
 }
 .flat__price {
   margin-bottom: 16px;
@@ -281,7 +266,7 @@ p {
 .flat__btn--price {
   min-height: 44px;
   margin-top: auto;
-  padding: 15px 50px;
+  padding: 15px 20px;
   font-weight: 500;
   font-size: 14px;
   background-color: #fac62d;
@@ -357,14 +342,8 @@ p {
     -ms-grid-row: 2;
     grid-row: 2
   }
-  .flat__b-sale {
-    -webkit-box-flex: 1;
-    -ms-flex: 1 0 auto;
-    flex: 1 0 auto
-  }
   .flat__options {
-    margin-bottom: -8px;
-    margin-right: -8px
+    margin-bottom: -8px
   }
   .flat__option {
     margin-bottom: 8px
@@ -377,7 +356,8 @@ p {
   .flat__b-desc {
     -webkit-box-flex: 1;
     -ms-flex-positive: 1;
-    flex-grow: 1
+    flex-grow: 1;
+    margin: 0
   }
   .flat__b-sale {
     width: 100%;
@@ -390,7 +370,6 @@ p {
 }
 @media screen and (max-width:768px) {
   .flat {
-    width: 304px;
     margin: 0 auto;
     padding: 20px
   }
